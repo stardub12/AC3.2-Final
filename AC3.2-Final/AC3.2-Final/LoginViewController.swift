@@ -45,7 +45,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
                     //self.updateInterface()
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let fc = storyboard.instantiateViewController(withIdentifier: "feedController")
+                    let fc = storyboard.instantiateViewController(withIdentifier: "controller")
                     self.present(fc, animated: true, completion: nil)
                     
                 }
@@ -84,7 +84,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 if user != nil {
                     //if login is successful
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let fc = storyboard.instantiateViewController(withIdentifier: "feedController")
+                    let fc = storyboard.instantiateViewController(withIdentifier: "controller")
                     self.present(fc, animated: true, completion: nil)
                     
                 } else {
