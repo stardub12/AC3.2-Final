@@ -11,7 +11,7 @@
 import UIKit
 import Firebase
 
-private let reuseIdentifier = "Cell"
+
 
 class CategoriesCollectionViewController: UICollectionViewController {
     var databaseReference: FIRDatabaseReference!
@@ -22,7 +22,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
         self.databaseReference = FIRDatabase.database().reference().child("posts")
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
     }
 
@@ -75,7 +75,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
         let imageView = UIImageView(frame: CGRect(x: 50, y: 0, width: self.view.frame.width, height: 50))
         cell.contentView.addSubview(imageView)
